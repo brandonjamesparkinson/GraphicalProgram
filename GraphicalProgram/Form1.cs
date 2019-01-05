@@ -26,5 +26,40 @@ namespace GraphicalProgram
         {
 
         }
+
+        private void DrawingBoard_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textButton_Click(object sender, EventArgs e)
+        {
+            commandText.Clear();
+        }
+
+        private void canvasButton_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void canvasBox_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void exitToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
