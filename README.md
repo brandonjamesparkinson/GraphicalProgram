@@ -28,8 +28,6 @@ Say what the step will be
 Download the ZIP for this program
 ```
 
-And repeat
-
 ```
 Open the ZIP Directory in Microsoft Visual Studio
 ```
@@ -64,7 +62,7 @@ This will work on any live system running an up to date version of Windows and M
 
 ## Built With
 
-* [Microsoft Visaul Studio](https://visualstudio.microsoft.com/) - The IDE used to build this program. 
+* [Microsoft Visuall Studio](https://visualstudio.microsoft.com/) - The IDE used to build this program. 
 
 
 ## Authors
