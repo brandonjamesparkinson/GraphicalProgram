@@ -81,9 +81,9 @@
             this.canvasLabel.AutoSize = true;
             this.canvasLabel.Location = new System.Drawing.Point(357, 63);
             this.canvasLabel.Name = "canvasLabel";
-            this.canvasLabel.Size = new System.Drawing.Size(66, 20);
+            this.canvasLabel.Size = new System.Drawing.Size(70, 20);
             this.canvasLabel.TabIndex = 2;
-            this.canvasLabel.Text = "Canvas:";
+            this.canvasLabel.Text = "Canvas :";
             this.canvasLabel.Click += new System.EventHandler(this.DrawingBoard_Click);
             // 
             // cmdLabel
@@ -91,9 +91,9 @@
             this.cmdLabel.AutoSize = true;
             this.cmdLabel.Location = new System.Drawing.Point(33, 63);
             this.cmdLabel.Name = "cmdLabel";
-            this.cmdLabel.Size = new System.Drawing.Size(137, 20);
+            this.cmdLabel.Size = new System.Drawing.Size(141, 20);
             this.cmdLabel.TabIndex = 3;
-            this.cmdLabel.Text = "Enter Commnads:";
+            this.cmdLabel.Text = "Enter Commnads :";
             // 
             // commandText
             // 
@@ -275,9 +275,9 @@
             this.toolsLabel.Location = new System.Drawing.Point(33, 491);
             this.toolsLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.toolsLabel.Name = "toolsLabel";
-            this.toolsLabel.Size = new System.Drawing.Size(90, 20);
+            this.toolsLabel.Size = new System.Drawing.Size(98, 20);
             this.toolsLabel.TabIndex = 8;
-            this.toolsLabel.Text = "Commands";
+            this.toolsLabel.Text = "Commands :";
             this.toolsLabel.Click += new System.EventHandler(this.label2_Click);
             // 
             // penLabel
@@ -286,9 +286,9 @@
             this.penLabel.Location = new System.Drawing.Point(33, 672);
             this.penLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.penLabel.Name = "penLabel";
-            this.penLabel.Size = new System.Drawing.Size(88, 20);
+            this.penLabel.Size = new System.Drawing.Size(96, 20);
             this.penLabel.TabIndex = 9;
-            this.penLabel.Text = "Pen Status";
+            this.penLabel.Text = "Pen Status :";
             // 
             // cdLabel
             // 
@@ -296,9 +296,9 @@
             this.cdLabel.Location = new System.Drawing.Point(38, 774);
             this.cdLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.cdLabel.Name = "cdLabel";
-            this.cdLabel.Size = new System.Drawing.Size(95, 20);
+            this.cdLabel.Size = new System.Drawing.Size(103, 20);
             this.cdLabel.TabIndex = 10;
-            this.cdLabel.Text = "Coordinates";
+            this.cdLabel.Text = "Coordinates :";
             // 
             // xlabel
             // 
