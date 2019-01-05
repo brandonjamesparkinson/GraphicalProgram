@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Drawing;
 
 namespace GraphicalProgram
 {
@@ -18,7 +13,7 @@ namespace GraphicalProgram
         public Rectangle(Color colour, int x, int y, int width, int height) : base(colour, x, y)
         {
 
-            this.width = width; //the only thingthat is different from shape
+            this.width = width; //the only thing that is different from shape
             this.height = height;
         }
 

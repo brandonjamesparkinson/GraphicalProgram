@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Drawing;
 
 namespace GraphicalProgram
 {
     abstract class Shape : Shapes
     {
         protected Color colour; //shape's colour
-        protected int x, y; //not I could use c# properties for this
+        protected int x, y; //always have an X and Y 
         public Shape()
         {
             colour = Color.Red;

@@ -7,3 +7,4 @@ C:\Users\Brandon\source\repos\GraphicalProgram\GraphicalProgram\obj\Debug\Graphi
 C:\Users\Brandon\source\repos\GraphicalProgram\GraphicalProgram\obj\Debug\GraphicalProgram.csproj.CoreCompileInputs.cache
 C:\Users\Brandon\source\repos\GraphicalProgram\GraphicalProgram\obj\Debug\GraphicalProgram.exe
 C:\Users\Brandon\source\repos\GraphicalProgram\GraphicalProgram\obj\Debug\GraphicalProgram.pdb
+C:\Users\Brandon\source\repos\GraphicalProgram\GraphicalProgram\obj\Debug\GraphicalProgram.csprojAssemblyReference.cache

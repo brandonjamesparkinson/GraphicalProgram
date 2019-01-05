@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GraphicalProgram
 {
@@ -10,7 +6,7 @@ namespace GraphicalProgram
     {
         public Shape getShape(String shapeType)
         {
-            shapeType = shapeType.ToUpper().Trim(); //yoi could argue that you want a specific word string to create an object but I'm allowing any case combination
+            shapeType = shapeType.ToUpper().Trim(); //you could argue that you want a specific word string to create an object but I'm allowing any case combination
 
 
             if (shapeType.Equals("CIRCLE"))
@@ -29,12 +25,11 @@ namespace GraphicalProgram
             }
             else
             {
-                //if we get here then what has been passed in is inkown so throw an appropriate exception
-                System.ArgumentException argEx = new System.ArgumentException("Factory error: " + shapeType + " does not exist");
+
+                //If this is reached then what has been passed is not recognised. A user friendly exception was thrown.
+                System.ArgumentException argEx = new System.ArgumentException("Shape Factory error: " + shapeType + " does not exist");
                 throw argEx;
             }
-
-
         }
     }
 }
