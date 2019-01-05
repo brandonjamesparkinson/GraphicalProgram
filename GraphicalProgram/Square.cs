@@ -10,7 +10,7 @@ namespace GraphicalProgram
         {
 
         }
-        public Square(Color colour, int x, int y, int size) : base(colour, x, y, size, size)
+        public Square(Color colour, int x, int y, int size) : base(x, y, size, size)
         {
             this.size = size;
         }

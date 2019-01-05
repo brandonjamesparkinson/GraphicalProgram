@@ -10,7 +10,7 @@ namespace GraphicalProgram
             width = 100;
             height = 100;
         }
-        public Rectangle(Color colour, int x, int y, int width, int height) : base(colour, x, y)
+        public Rectangle(int x, int y, int width, int height) : base(x, y)
         {
 
             this.width = width; //the only thing that is different from shape

@@ -2,18 +2,17 @@
 
 namespace GraphicalProgram
 {
-    abstract class Shape : Shapes
+    public abstract class Shape : Shapes
     {
         protected Color colour; //shape's colour
         protected int x, y; //always have an X and Y 
         public Shape()
         {
-            colour = Color.Red;
             x = y = 100;
         }
 
 
-        public Shape(Color colour, int x, int y)
+        public Shape( int x, int y)
         {
 
             this.colour = colour; //shape's colour
