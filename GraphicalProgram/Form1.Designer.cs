@@ -38,13 +38,17 @@
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.printToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tipsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.coloursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.shapesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.commandsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.circleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.triangleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.polygonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.drawButton = new System.Windows.Forms.Button();
             this.textButton = new System.Windows.Forms.Button();
@@ -57,7 +61,6 @@
             this.xTxtbox = new System.Windows.Forms.TextBox();
             this.yTxtbox = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.exitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.canvasBox)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -99,6 +102,7 @@
             this.commandText.Name = "commandText";
             this.commandText.Size = new System.Drawing.Size(286, 382);
             this.commandText.TabIndex = 4;
+            this.commandText.TextChanged += new System.EventHandler(this.commandText_TextChanged);
             // 
             // fileToolStripMenuItem
             // 
@@ -123,18 +127,28 @@
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
             this.saveToolStripMenuItem.Text = "Save";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // loadToolStripMenuItem
             // 
             this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
             this.loadToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
             this.loadToolStripMenuItem.Text = "Load";
+            this.loadToolStripMenuItem.Click += new System.EventHandler(this.loadToolStripMenuItem_Click);
             // 
             // printToolStripMenuItem
             // 
             this.printToolStripMenuItem.Name = "printToolStripMenuItem";
             this.printToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
             this.printToolStripMenuItem.Text = "Print";
+            this.printToolStripMenuItem.Click += new System.EventHandler(this.printToolStripMenuItem_Click);
+            // 
+            // exitToolStripMenuItem1
+            // 
+            this.exitToolStripMenuItem1.Name = "exitToolStripMenuItem1";
+            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(252, 30);
+            this.exitToolStripMenuItem1.Text = "Exit";
+            this.exitToolStripMenuItem1.Click += new System.EventHandler(this.exitToolStripMenuItem1_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -142,7 +156,10 @@
             this.tipsToolStripMenuItem,
             this.coloursToolStripMenuItem,
             this.shapesToolStripMenuItem,
-            this.commandsToolStripMenuItem});
+            this.commandsToolStripMenuItem,
+            this.circleToolStripMenuItem,
+            this.triangleToolStripMenuItem,
+            this.polygonToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(116, 29);
             this.helpToolStripMenuItem.Text = "Commands";
@@ -151,38 +168,59 @@
             // tipsToolStripMenuItem
             // 
             this.tipsToolStripMenuItem.Name = "tipsToolStripMenuItem";
-            this.tipsToolStripMenuItem.Size = new System.Drawing.Size(188, 30);
-            this.tipsToolStripMenuItem.Text = "Tips";
+            this.tipsToolStripMenuItem.Size = new System.Drawing.Size(223, 30);
+            this.tipsToolStripMenuItem.Text = "Pen Up";
             // 
             // coloursToolStripMenuItem
             // 
             this.coloursToolStripMenuItem.Name = "coloursToolStripMenuItem";
-            this.coloursToolStripMenuItem.Size = new System.Drawing.Size(188, 30);
-            this.coloursToolStripMenuItem.Text = "Colours";
+            this.coloursToolStripMenuItem.Size = new System.Drawing.Size(223, 30);
+            this.coloursToolStripMenuItem.Text = "Pen Down";
             // 
             // shapesToolStripMenuItem
             // 
             this.shapesToolStripMenuItem.Name = "shapesToolStripMenuItem";
-            this.shapesToolStripMenuItem.Size = new System.Drawing.Size(188, 30);
-            this.shapesToolStripMenuItem.Text = "Shapes";
+            this.shapesToolStripMenuItem.Size = new System.Drawing.Size(223, 30);
+            this.shapesToolStripMenuItem.Text = "Pen Movements";
             // 
             // commandsToolStripMenuItem
             // 
             this.commandsToolStripMenuItem.Name = "commandsToolStripMenuItem";
-            this.commandsToolStripMenuItem.Size = new System.Drawing.Size(188, 30);
-            this.commandsToolStripMenuItem.Text = "Commands";
+            this.commandsToolStripMenuItem.Size = new System.Drawing.Size(223, 30);
+            this.commandsToolStripMenuItem.Text = "Rectangle";
+            // 
+            // circleToolStripMenuItem
+            // 
+            this.circleToolStripMenuItem.Name = "circleToolStripMenuItem";
+            this.circleToolStripMenuItem.Size = new System.Drawing.Size(223, 30);
+            this.circleToolStripMenuItem.Text = "Circle";
+            // 
+            // triangleToolStripMenuItem
+            // 
+            this.triangleToolStripMenuItem.Name = "triangleToolStripMenuItem";
+            this.triangleToolStripMenuItem.Size = new System.Drawing.Size(223, 30);
+            this.triangleToolStripMenuItem.Text = "Triangle";
+            // 
+            // polygonToolStripMenuItem
+            // 
+            this.polygonToolStripMenuItem.Name = "polygonToolStripMenuItem";
+            this.polygonToolStripMenuItem.Size = new System.Drawing.Size(223, 30);
+            this.polygonToolStripMenuItem.Text = "Polygon";
             // 
             // aboutToolStripMenuItem
             // 
+            this.aboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.helpToolStripMenuItem1});
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(74, 29);
             this.aboutToolStripMenuItem.Text = "About";
             // 
-            // exitToolStripMenuItem
+            // helpToolStripMenuItem1
             // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(51, 29);
-            this.exitToolStripMenuItem.Text = "Exit";
+            this.helpToolStripMenuItem1.Name = "helpToolStripMenuItem1";
+            this.helpToolStripMenuItem1.Size = new System.Drawing.Size(252, 30);
+            this.helpToolStripMenuItem1.Text = "Help";
+            this.helpToolStripMenuItem1.Click += new System.EventHandler(this.helpToolStripMenuItem1_Click);
             // 
             // menuStrip1
             // 
@@ -190,8 +228,7 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.helpToolStripMenuItem,
-            this.aboutToolStripMenuItem,
-            this.exitToolStripMenuItem});
+            this.aboutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
@@ -306,13 +343,6 @@
             this.textBox1.Size = new System.Drawing.Size(219, 26);
             this.textBox1.TabIndex = 15;
             // 
-            // exitToolStripMenuItem1
-            // 
-            this.exitToolStripMenuItem1.Name = "exitToolStripMenuItem1";
-            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(252, 30);
-            this.exitToolStripMenuItem1.Text = "Exit";
-            this.exitToolStripMenuItem1.Click += new System.EventHandler(this.exitToolStripMenuItem1_Click);
-            // 
             // Form1
             // 
             this.AccessibleDescription = "A Graphical Program to create shapes.";
@@ -368,7 +398,6 @@
         private System.Windows.Forms.ToolStripMenuItem shapesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem commandsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.Button drawButton;
         private System.Windows.Forms.Button textButton;
@@ -382,6 +411,10 @@
         private System.Windows.Forms.TextBox yTxtbox;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem circleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem triangleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem polygonToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem1;
     }
 }
 
