@@ -2,13 +2,11 @@
 
 This program is based around the idea of teaching smple programming concepts. The language that was used to build this project is C#, and the program will have the basics of sequence, selection, and iteration, which will allow a student programmer to explore these concepts using graphics. 
 
-## Getting Started
+## How to Use 
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+It's simple to get this program running on any Windows OS running Microsoft Visual Studio.
 
-### Prerequisites
-
-What things you need to install the software and how to install them
+### What you'll need
 
 ```
 Microsoft Visual Studio
@@ -18,11 +16,7 @@ Microsoft Visual Studio
 Windows 10
 ```
 
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
+### How to Run
 
 ```
 Download the ZIP for this program
@@ -38,7 +32,7 @@ Run the program
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
+Some tests were created to test some of the functionality. 
 
 ### Break down into end to end tests
 
