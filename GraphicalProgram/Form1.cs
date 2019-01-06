@@ -20,6 +20,7 @@ namespace GraphicalProgram
         public Form1()
         {
             InitializeComponent();
+            g = canvasBox.CreateGraphics();
 
             ShapeFactory factory = new ShapeFactory();
             try
@@ -79,7 +80,6 @@ namespace GraphicalProgram
         //functionality for the form itself when loaded 
         private void Form1_Load(object sender, EventArgs e)
         {
-        
 
         }
 
@@ -98,6 +98,10 @@ namespace GraphicalProgram
         {
 
             ShapeFactory shapeFactory = new ShapeFactory();
+            Pen pen = new Pen(Color.Red);
+            Graphics g = canvasBox.CreateGraphics();
+
+            g.DrawRectangle(pen, 20, 20, 50, 50);
 
             var input = commandText.Text;
             input.Split(new[] {"\r\n", "\r", "\n"}, StringSplitOptions.None);
@@ -107,7 +111,8 @@ namespace GraphicalProgram
 
             }
 
-           
+
+
 
         }
 
@@ -126,12 +131,11 @@ namespace GraphicalProgram
         //functionality for clearing canvas 
         private void canvasButton_Click(object sender, EventArgs e)
         {
-            
         }
 
         private void canvasBox_Click(object sender, EventArgs e)
         {
-
+          
         }
 
         private void exitToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -240,6 +244,21 @@ namespace GraphicalProgram
 
         //functionality for y coordinates 
         private void yTxtbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void commandText_MouseHover(object sender, EventArgs e)
+        {
+            statusStrip1.Text = "Enter Commands Here";
+        }
+
+        private void commandText_MouseLeave(object sender, EventArgs e)
+        {
+            statusStrip1.Text = "";
+        }
+
+        private void toolStripStatusLabel1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
         }

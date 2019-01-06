@@ -61,12 +61,14 @@
             this.xTxtbox = new System.Windows.Forms.TextBox();
             this.yTxtbox = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             ((System.ComponentModel.ISupportInitialize)(this.canvasBox)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // canvasBox
             // 
+            this.canvasBox.BackColor = System.Drawing.Color.White;
             this.canvasBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.canvasBox.Location = new System.Drawing.Point(362, 88);
             this.canvasBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -103,6 +105,8 @@
             this.commandText.Size = new System.Drawing.Size(286, 382);
             this.commandText.TabIndex = 4;
             this.commandText.TextChanged += new System.EventHandler(this.commandText_TextChanged);
+            this.commandText.MouseLeave += new System.EventHandler(this.commandText_MouseLeave);
+            this.commandText.MouseHover += new System.EventHandler(this.commandText_MouseHover);
             // 
             // fileToolStripMenuItem
             // 
@@ -120,34 +124,34 @@
             // newToolStripMenuItem
             // 
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(135, 30);
             this.newToolStripMenuItem.Text = "New";
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(135, 30);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // loadToolStripMenuItem
             // 
             this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
-            this.loadToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
+            this.loadToolStripMenuItem.Size = new System.Drawing.Size(135, 30);
             this.loadToolStripMenuItem.Text = "Load";
             this.loadToolStripMenuItem.Click += new System.EventHandler(this.loadToolStripMenuItem_Click);
             // 
             // printToolStripMenuItem
             // 
             this.printToolStripMenuItem.Name = "printToolStripMenuItem";
-            this.printToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
+            this.printToolStripMenuItem.Size = new System.Drawing.Size(135, 30);
             this.printToolStripMenuItem.Text = "Print";
             this.printToolStripMenuItem.Click += new System.EventHandler(this.printToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem1
             // 
             this.exitToolStripMenuItem1.Name = "exitToolStripMenuItem1";
-            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(252, 30);
+            this.exitToolStripMenuItem1.Size = new System.Drawing.Size(135, 30);
             this.exitToolStripMenuItem1.Text = "Exit";
             this.exitToolStripMenuItem1.Click += new System.EventHandler(this.exitToolStripMenuItem1_Click);
             // 
@@ -169,43 +173,43 @@
             // tipsToolStripMenuItem
             // 
             this.tipsToolStripMenuItem.Name = "tipsToolStripMenuItem";
-            this.tipsToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
+            this.tipsToolStripMenuItem.Size = new System.Drawing.Size(223, 30);
             this.tipsToolStripMenuItem.Text = "Pen Up";
             // 
             // coloursToolStripMenuItem
             // 
             this.coloursToolStripMenuItem.Name = "coloursToolStripMenuItem";
-            this.coloursToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
+            this.coloursToolStripMenuItem.Size = new System.Drawing.Size(223, 30);
             this.coloursToolStripMenuItem.Text = "Pen Down";
             // 
             // shapesToolStripMenuItem
             // 
             this.shapesToolStripMenuItem.Name = "shapesToolStripMenuItem";
-            this.shapesToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
+            this.shapesToolStripMenuItem.Size = new System.Drawing.Size(223, 30);
             this.shapesToolStripMenuItem.Text = "Pen Movements";
             // 
             // commandsToolStripMenuItem
             // 
             this.commandsToolStripMenuItem.Name = "commandsToolStripMenuItem";
-            this.commandsToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
+            this.commandsToolStripMenuItem.Size = new System.Drawing.Size(223, 30);
             this.commandsToolStripMenuItem.Text = "Rectangle";
             // 
             // circleToolStripMenuItem
             // 
             this.circleToolStripMenuItem.Name = "circleToolStripMenuItem";
-            this.circleToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
+            this.circleToolStripMenuItem.Size = new System.Drawing.Size(223, 30);
             this.circleToolStripMenuItem.Text = "Circle";
             // 
             // triangleToolStripMenuItem
             // 
             this.triangleToolStripMenuItem.Name = "triangleToolStripMenuItem";
-            this.triangleToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
+            this.triangleToolStripMenuItem.Size = new System.Drawing.Size(223, 30);
             this.triangleToolStripMenuItem.Text = "Triangle";
             // 
             // polygonToolStripMenuItem
             // 
             this.polygonToolStripMenuItem.Name = "polygonToolStripMenuItem";
-            this.polygonToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
+            this.polygonToolStripMenuItem.Size = new System.Drawing.Size(223, 30);
             this.polygonToolStripMenuItem.Text = "Polygon";
             // 
             // aboutToolStripMenuItem
@@ -347,6 +351,15 @@
             this.textBox1.TabIndex = 15;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 906);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(1468, 22);
+            this.statusStrip1.TabIndex = 16;
+            this.statusStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStripStatusLabel1_ItemClicked);
+            // 
             // Form1
             // 
             this.AccessibleDescription = "A Graphical Program to create shapes.";
@@ -354,6 +367,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1468, 928);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.yTxtbox);
             this.Controls.Add(this.xTxtbox);
@@ -419,6 +433,7 @@
         private System.Windows.Forms.ToolStripMenuItem triangleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem polygonToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem1;
+        private System.Windows.Forms.StatusStrip statusStrip1;
     }
 }
 
