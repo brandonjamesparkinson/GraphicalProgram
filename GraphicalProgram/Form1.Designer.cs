@@ -381,6 +381,7 @@
             this.colourBox.Name = "colourBox";
             this.colourBox.Size = new System.Drawing.Size(111, 26);
             this.colourBox.TabIndex = 18;
+            this.colourBox.TextChanged += new System.EventHandler(this.colourBox_TextChanged);
             // 
             // colourToolStripMenuItem
             // 

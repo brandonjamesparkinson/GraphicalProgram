@@ -77,6 +77,14 @@ namespace GraphicalProgram
 
         }
 
+        //dialog prompt for closing application via 'x' with yes or no prompt
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want to close the program?", "Close Program", MessageBoxButtons.YesNo) == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+        }
 
         //functionality for the form itself when loaded 
         private void Form1_Load(object sender, EventArgs e)
@@ -364,6 +372,11 @@ namespace GraphicalProgram
             {
                 
             }
+
+        }
+
+        private void colourBox_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }
