@@ -37,7 +37,6 @@
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.printToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tipsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,6 +49,7 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.colourToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.drawButton = new System.Windows.Forms.Button();
             this.textButton = new System.Windows.Forms.Button();
             this.canvasButton = new System.Windows.Forms.Button();
@@ -64,7 +64,6 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.colLabel = new System.Windows.Forms.Label();
             this.colourBox = new System.Windows.Forms.TextBox();
-            this.colourToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.canvasBox)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -117,7 +116,6 @@
             this.newToolStripMenuItem,
             this.saveToolStripMenuItem,
             this.loadToolStripMenuItem,
-            this.printToolStripMenuItem,
             this.exitToolStripMenuItem1});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(50, 29);
@@ -145,13 +143,6 @@
             this.loadToolStripMenuItem.Text = "Load";
             this.loadToolStripMenuItem.Click += new System.EventHandler(this.loadToolStripMenuItem_Click);
             // 
-            // printToolStripMenuItem
-            // 
-            this.printToolStripMenuItem.Name = "printToolStripMenuItem";
-            this.printToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
-            this.printToolStripMenuItem.Text = "Print";
-            this.printToolStripMenuItem.Click += new System.EventHandler(this.printToolStripMenuItem_Click);
-            // 
             // exitToolStripMenuItem1
             // 
             this.exitToolStripMenuItem1.Name = "exitToolStripMenuItem1";
@@ -177,43 +168,43 @@
             // tipsToolStripMenuItem
             // 
             this.tipsToolStripMenuItem.Name = "tipsToolStripMenuItem";
-            this.tipsToolStripMenuItem.Size = new System.Drawing.Size(223, 30);
+            this.tipsToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
             this.tipsToolStripMenuItem.Text = "Pen Up";
             // 
             // coloursToolStripMenuItem
             // 
             this.coloursToolStripMenuItem.Name = "coloursToolStripMenuItem";
-            this.coloursToolStripMenuItem.Size = new System.Drawing.Size(223, 30);
+            this.coloursToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
             this.coloursToolStripMenuItem.Text = "Pen Down";
             // 
             // shapesToolStripMenuItem
             // 
             this.shapesToolStripMenuItem.Name = "shapesToolStripMenuItem";
-            this.shapesToolStripMenuItem.Size = new System.Drawing.Size(223, 30);
+            this.shapesToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
             this.shapesToolStripMenuItem.Text = "Pen Movements";
             // 
             // commandsToolStripMenuItem
             // 
             this.commandsToolStripMenuItem.Name = "commandsToolStripMenuItem";
-            this.commandsToolStripMenuItem.Size = new System.Drawing.Size(223, 30);
+            this.commandsToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
             this.commandsToolStripMenuItem.Text = "Rectangle";
             // 
             // circleToolStripMenuItem
             // 
             this.circleToolStripMenuItem.Name = "circleToolStripMenuItem";
-            this.circleToolStripMenuItem.Size = new System.Drawing.Size(223, 30);
+            this.circleToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
             this.circleToolStripMenuItem.Text = "Circle";
             // 
             // triangleToolStripMenuItem
             // 
             this.triangleToolStripMenuItem.Name = "triangleToolStripMenuItem";
-            this.triangleToolStripMenuItem.Size = new System.Drawing.Size(223, 30);
+            this.triangleToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
             this.triangleToolStripMenuItem.Text = "Triangle";
             // 
             // polygonToolStripMenuItem
             // 
             this.polygonToolStripMenuItem.Name = "polygonToolStripMenuItem";
-            this.polygonToolStripMenuItem.Size = new System.Drawing.Size(223, 30);
+            this.polygonToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
             this.polygonToolStripMenuItem.Text = "Polygon";
             // 
             // aboutToolStripMenuItem
@@ -245,6 +236,12 @@
             this.menuStrip1.Size = new System.Drawing.Size(1468, 35);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // colourToolStripMenuItem
+            // 
+            this.colourToolStripMenuItem.Name = "colourToolStripMenuItem";
+            this.colourToolStripMenuItem.Size = new System.Drawing.Size(77, 29);
+            this.colourToolStripMenuItem.Text = "Colour";
             // 
             // drawButton
             // 
@@ -383,12 +380,6 @@
             this.colourBox.TabIndex = 18;
             this.colourBox.TextChanged += new System.EventHandler(this.colourBox_TextChanged);
             // 
-            // colourToolStripMenuItem
-            // 
-            this.colourToolStripMenuItem.Name = "colourToolStripMenuItem";
-            this.colourToolStripMenuItem.Size = new System.Drawing.Size(77, 29);
-            this.colourToolStripMenuItem.Text = "Colour";
-            // 
             // Form1
             // 
             this.AccessibleDescription = "A Graphical Program to create shapes.";
@@ -440,7 +431,6 @@
         private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem loadToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem printToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tipsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem coloursToolStripMenuItem;

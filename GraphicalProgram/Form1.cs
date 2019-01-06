@@ -18,13 +18,13 @@ namespace GraphicalProgram
         private System.Drawing.Graphics g;
         //private System.Drawing.Pen pen1 = new System.Drawing.Pen(Color.Blue.2);
         private ArrayList shapes = new ArrayList();
+        bool penPosition = false;
 
         public Form1()
         {
             InitializeComponent();
-
-
             g = canvasBox.CreateGraphics();
+
 
             ShapeFactory factory = new ShapeFactory();
             try
@@ -74,10 +74,6 @@ namespace GraphicalProgram
 
                 }
             }
-
-
-
-
         }
 
 
@@ -95,7 +91,7 @@ namespace GraphicalProgram
         {
 
         }
-
+        
         private void helpToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -363,9 +359,13 @@ namespace GraphicalProgram
         }
 
 
-        //functionality for pen status (up or down)
+        //functionality for pen status (up or down) (changing colour based on pen being in use or not)
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+            if (penPosition = false) ;
+            {
+                
+            }
 
         }
 
