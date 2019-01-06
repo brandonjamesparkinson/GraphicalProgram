@@ -14,7 +14,8 @@ namespace GraphicalProgram
 {
     public partial class Form1 : Form
     {
-        private Graphics g;
+        private System.Drawing.Graphics g;
+        //private System.Drawing.Pen pen1 = new System.Drawing.Pen(Color.Blue.2);
         private ArrayList shapes = new ArrayList();
 
         public Form1()
@@ -100,11 +101,35 @@ namespace GraphicalProgram
             ShapeFactory shapeFactory = new ShapeFactory();
             Pen pen = new Pen(Color.Red);
             Graphics g = canvasBox.CreateGraphics();
-
-            g.DrawRectangle(pen, 20, 20, 50, 50);
-
+            
+            //take input and split 
             var input = commandText.Text;
             input.Split(new[] {"\r\n", "\r", "\n"}, StringSplitOptions.None);
+
+            //functionality for drawing circle to canvas 
+            if (input.Contains("Circle"))
+            {
+                g.DrawEllipse(pen, 20, 20, 50, 50);
+            }
+
+            //functionality for drawing rectangle to canvas 
+            if (input.Contains("Rectangle"))
+            {
+                g.DrawRectangle(pen, 20, 20, 50, 50);
+            }
+
+            //functionality for pen up command 
+            if (input.Contains("Pen Up"))
+            {
+                
+            }
+
+            //functionality for pen down command
+            if (input.Contains("Pen Down"))
+            {
+
+            }
+
 
             for (int i = 0; i < shapes.Count; i++)
             {
