@@ -2,8 +2,13 @@
 
 namespace GraphicalProgram
 {
+
+    //class for rectangle shape 
+    //parent class for rectangle is Shape 
+    //rectangle is the parent class for square 
     class Rectangle : Shape
     {
+        //all rectangles need width and height 
         int width, height;
         public Rectangle() : base()
         {

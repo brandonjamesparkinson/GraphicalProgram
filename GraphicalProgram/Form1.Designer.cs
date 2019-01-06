@@ -115,6 +115,7 @@
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(50, 29);
             this.fileToolStripMenuItem.Text = "File";
+            this.fileToolStripMenuItem.Click += new System.EventHandler(this.fileToolStripMenuItem_Click);
             // 
             // newToolStripMenuItem
             // 
@@ -168,43 +169,43 @@
             // tipsToolStripMenuItem
             // 
             this.tipsToolStripMenuItem.Name = "tipsToolStripMenuItem";
-            this.tipsToolStripMenuItem.Size = new System.Drawing.Size(223, 30);
+            this.tipsToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
             this.tipsToolStripMenuItem.Text = "Pen Up";
             // 
             // coloursToolStripMenuItem
             // 
             this.coloursToolStripMenuItem.Name = "coloursToolStripMenuItem";
-            this.coloursToolStripMenuItem.Size = new System.Drawing.Size(223, 30);
+            this.coloursToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
             this.coloursToolStripMenuItem.Text = "Pen Down";
             // 
             // shapesToolStripMenuItem
             // 
             this.shapesToolStripMenuItem.Name = "shapesToolStripMenuItem";
-            this.shapesToolStripMenuItem.Size = new System.Drawing.Size(223, 30);
+            this.shapesToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
             this.shapesToolStripMenuItem.Text = "Pen Movements";
             // 
             // commandsToolStripMenuItem
             // 
             this.commandsToolStripMenuItem.Name = "commandsToolStripMenuItem";
-            this.commandsToolStripMenuItem.Size = new System.Drawing.Size(223, 30);
+            this.commandsToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
             this.commandsToolStripMenuItem.Text = "Rectangle";
             // 
             // circleToolStripMenuItem
             // 
             this.circleToolStripMenuItem.Name = "circleToolStripMenuItem";
-            this.circleToolStripMenuItem.Size = new System.Drawing.Size(223, 30);
+            this.circleToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
             this.circleToolStripMenuItem.Text = "Circle";
             // 
             // triangleToolStripMenuItem
             // 
             this.triangleToolStripMenuItem.Name = "triangleToolStripMenuItem";
-            this.triangleToolStripMenuItem.Size = new System.Drawing.Size(223, 30);
+            this.triangleToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
             this.triangleToolStripMenuItem.Text = "Triangle";
             // 
             // polygonToolStripMenuItem
             // 
             this.polygonToolStripMenuItem.Name = "polygonToolStripMenuItem";
-            this.polygonToolStripMenuItem.Size = new System.Drawing.Size(223, 30);
+            this.polygonToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
             this.polygonToolStripMenuItem.Text = "Polygon";
             // 
             // aboutToolStripMenuItem
@@ -218,7 +219,7 @@
             // helpToolStripMenuItem1
             // 
             this.helpToolStripMenuItem1.Name = "helpToolStripMenuItem1";
-            this.helpToolStripMenuItem1.Size = new System.Drawing.Size(252, 30);
+            this.helpToolStripMenuItem1.Size = new System.Drawing.Size(133, 30);
             this.helpToolStripMenuItem1.Text = "Help";
             this.helpToolStripMenuItem1.Click += new System.EventHandler(this.helpToolStripMenuItem1_Click);
             // 
@@ -327,6 +328,7 @@
             this.xTxtbox.Name = "xTxtbox";
             this.xTxtbox.Size = new System.Drawing.Size(148, 26);
             this.xTxtbox.TabIndex = 13;
+            this.xTxtbox.TextChanged += new System.EventHandler(this.xTxtbox_TextChanged);
             // 
             // yTxtbox
             // 
@@ -335,6 +337,7 @@
             this.yTxtbox.Name = "yTxtbox";
             this.yTxtbox.Size = new System.Drawing.Size(148, 26);
             this.yTxtbox.TabIndex = 14;
+            this.yTxtbox.TextChanged += new System.EventHandler(this.yTxtbox_TextChanged);
             // 
             // textBox1
             // 
@@ -342,6 +345,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(219, 26);
             this.textBox1.TabIndex = 15;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // Form1
             // 

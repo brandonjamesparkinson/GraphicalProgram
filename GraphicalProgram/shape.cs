@@ -2,11 +2,14 @@
 
 namespace GraphicalProgram
 {
+
+    //class for the shape 
+    //parent class for shape is Shapes
     public abstract class Shape : Shapes
     {
         protected Color colour; //shape's colour
         protected int x, y; //always have an X and Y 
-        public Shape()
+        public Shape() //Shape can be accessed by any other class
         {
             x = y = 100;
         }

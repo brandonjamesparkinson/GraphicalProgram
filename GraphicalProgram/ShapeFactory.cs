@@ -2,6 +2,10 @@
 
 namespace GraphicalProgram
 {
+
+    //class for shapefactory
+    //following the factory design pattern 
+    //a factory creates objects. this is implemented in c# programs. 
     class ShapeFactory
     {
         public Shape getShape(String shapeType)

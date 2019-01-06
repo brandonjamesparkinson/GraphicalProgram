@@ -2,8 +2,13 @@
 
 namespace GraphicalProgram
 {
+
+    //class for square shape 
+    //square calls from rectangle as that is its parent class 
     class Square : Rectangle
     {
+
+        //variable for size 
         private int size;
 
         public Square() : base()

@@ -3,6 +3,9 @@ using System.Drawing;
 
 namespace GraphicalProgram
 {
+
+    //class for the circle shape
+    //the parent class for circle is shape 
     class Circle : Shape
     {
         int radius;

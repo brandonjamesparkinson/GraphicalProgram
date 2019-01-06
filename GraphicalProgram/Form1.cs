@@ -75,6 +75,8 @@ namespace GraphicalProgram
 
         }
 
+
+        //functionality for the form itself when loaded 
         private void Form1_Load(object sender, EventArgs e)
         {
         
@@ -91,6 +93,7 @@ namespace GraphicalProgram
 
         }
 
+        //functionality for the 'draw' / 'run' button
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -98,6 +101,11 @@ namespace GraphicalProgram
 
             var input = commandText.Text;
             input.Split(new[] {"\r\n", "\r", "\n"}, StringSplitOptions.None);
+
+            for (int i = 0; i < shapes.Count; i++)
+            {
+
+            }
 
            
 
@@ -108,11 +116,14 @@ namespace GraphicalProgram
 
         }
 
+        //functionality for clearing text box button
         private void textButton_Click(object sender, EventArgs e)
         {
             commandText.Clear();
         }
 
+
+        //functionality for clearing canvas 
         private void canvasButton_Click(object sender, EventArgs e)
         {
             
@@ -202,7 +213,33 @@ namespace GraphicalProgram
 
             }
 
+        //functionality for command text box field 
         private void commandText_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        //functionality for pen status (up or down)
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+        //functionality for x coordinates
+        private void xTxtbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        //functionality for y coordinates 
+        private void yTxtbox_TextChanged(object sender, EventArgs e)
         {
 
         }
