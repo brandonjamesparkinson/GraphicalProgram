@@ -153,7 +153,7 @@ namespace GraphicalProgram
             }
 
             //functionality for drawing circle to canvas 
-            if (input.Contains("Repeat"))
+            if (input.Contains("RepeatCirc"))
             {
 
                 try
@@ -177,7 +177,39 @@ namespace GraphicalProgram
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("The Format should be like this - 'Repeat 0 0'", "Repeat Error!");
+                    MessageBox.Show("The Format should be like this - 'RepeatCirc 0 0'", "Repeat Circle Error!");
+                }
+            }
+
+            //functionality for drawing circle to canvas 
+            if (input.Contains("RepeatRect"))
+            {
+
+
+                try
+                {
+                    var moveRect = input.Split();
+                    var width = moveRect[1];
+                    var height = moveRect[2];
+
+                    var wid = int.Parse(width);
+                    var hei = int.Parse(height);
+
+                    Console.WriteLine(width);
+                    Console.WriteLine(height);
+
+                    g.DrawRectangle(pen, 0, 0, wid, hei);
+                    g.DrawRectangle(pen, 10, 10, wid, hei);
+                    g.DrawRectangle(pen, 20, 20, wid, hei);
+                    g.DrawRectangle(pen, 30, 30, wid, hei);
+                    g.DrawRectangle(pen, 40, 40, wid, hei);
+                    g.DrawRectangle(pen, 50, 50, wid, hei);
+                    g.DrawRectangle(pen, 60, 60, wid, hei);
+                    g.DrawRectangle(pen, 70, 70, wid, hei);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("The Format should be like this - 'RepeatRect 0 0'", "Repeat Rectangle Error!");
                 }
             }
 
