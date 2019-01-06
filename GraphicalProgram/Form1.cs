@@ -112,6 +112,21 @@ namespace GraphicalProgram
                 g.DrawEllipse(pen, 20, 20, 50, 50);
             }
 
+            //functionality for moving pen via coordinates of x and y
+            if (input.Contains("move"))
+            {
+                string[] bacon = input.Split();
+                string x = bacon[1];
+                string y = bacon[2];
+
+                int numX = int.Parse(x);
+                int numY = int.Parse(y);
+
+                Console.WriteLine(x);
+                Console.WriteLine(y);
+
+            }
+
             //functionality for drawing rectangle to canvas 
             if (input.Contains("Rectangle"))
             {
