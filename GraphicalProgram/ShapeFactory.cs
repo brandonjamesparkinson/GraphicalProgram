@@ -3,7 +3,7 @@
 namespace GraphicalProgram
 {
 
-    //class for shapefactory
+    //class for Shape Factory
     //following the factory design pattern 
     //a factory creates objects. this is implemented in c# programs. 
     class ShapeFactory
@@ -24,6 +24,16 @@ namespace GraphicalProgram
 
             }
             else if (shapeType.Equals("SQUARE"))
+            {
+                return new Square();
+            }
+
+            else if (shapeType.Equals("TRIANGLE"))
+            {
+                return new Square();
+            }
+
+            else if (shapeType.Equals("POLYGON"))
             {
                 return new Square();
             }

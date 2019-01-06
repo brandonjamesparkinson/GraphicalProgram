@@ -14,6 +14,7 @@ namespace GraphicalProgram
 {
     public partial class Form1 : Form
     {
+
         private System.Drawing.Graphics g;
         //private System.Drawing.Pen pen1 = new System.Drawing.Pen(Color.Blue.2);
         private ArrayList shapes = new ArrayList();
@@ -21,6 +22,8 @@ namespace GraphicalProgram
         public Form1()
         {
             InitializeComponent();
+
+
             g = canvasBox.CreateGraphics();
 
             ShapeFactory factory = new ShapeFactory();
@@ -78,7 +81,6 @@ namespace GraphicalProgram
         }
 
 
-
         //dialog prompt for closing application via 'x' with yes or no prompt
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
@@ -111,13 +113,15 @@ namespace GraphicalProgram
             ShapeFactory shapeFactory = new ShapeFactory();
             Pen pen = new Pen(Color.Black);
             Graphics g = canvasBox.CreateGraphics();
+
             
             //take input and split 
             var input = commandText.Text;
             input.Split(new[] {"\r\n", "\r", "\n"}, StringSplitOptions.None);
 
+
             //functionality for drawing circle to canvas 
-            if (input.Contains("circle"))
+            if (input.Contains("Circle"))
             {
 
                 try
@@ -135,9 +139,6 @@ namespace GraphicalProgram
                 {
                     MessageBox.Show("The Format should be like this - 'Circle 0 0'", "Circle Error!");
                 }
-
-
-
             }
 
             //functionality for moving pen via coordinates of x and y
@@ -151,7 +152,6 @@ namespace GraphicalProgram
                 int numY = int.Parse(y);
 
 
-
                 Console.WriteLine(x);
                 Console.WriteLine(y);
 
@@ -163,12 +163,12 @@ namespace GraphicalProgram
 
                 try
                 {
-                    string[] moveRect = input.Split();
-                    string width = moveRect[1];
-                    string height = moveRect[2];
+                    var moveRect = input.Split();
+                    var width = moveRect[1];
+                    var height = moveRect[2];
 
-                    int wid = int.Parse(width);
-                    int hei = int.Parse(height);
+                    var wid = int.Parse(width);
+                    var hei = int.Parse(height);
 
                     Console.WriteLine(width);
                     Console.WriteLine(height);
@@ -198,7 +198,7 @@ namespace GraphicalProgram
                 // Draw polygon to screen.
                 g.DrawPolygon(pen, curvePoints);
             }
-
+        
             //functionality for drawing Polygon to canvas 
             if (input.Contains("Polygon"))
             {
@@ -245,9 +245,6 @@ namespace GraphicalProgram
             {
 
             }
-
-
-
 
         }
 
