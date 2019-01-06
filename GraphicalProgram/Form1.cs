@@ -77,6 +77,8 @@ namespace GraphicalProgram
 
         }
 
+
+
         //dialog prompt for closing application via 'x' with yes or no prompt
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
@@ -115,20 +117,40 @@ namespace GraphicalProgram
             input.Split(new[] {"\r\n", "\r", "\n"}, StringSplitOptions.None);
 
             //functionality for drawing circle to canvas 
-            if (input.Contains("Circle"))
+            if (input.Contains("circle"))
             {
-                g.DrawEllipse(pen, 20, 20, 50, 50);
+
+                try
+                {
+                    string[] moveCircle = input.Split();
+                    string radius = moveCircle[1];
+
+                    int rad = int.Parse(radius);
+
+                    Console.WriteLine(radius);
+
+                    g.DrawEllipse(pen, 0, 0, rad, rad);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("The Format should be like this - 'Circle 0 0'", "Circle Error!");
+                }
+
+
+
             }
 
             //functionality for moving pen via coordinates of x and y
             if (input.Contains("move"))
             {
-                string[] bacon = input.Split();
-                string x = bacon[1];
-                string y = bacon[2];
+                string[] movement = input.Split();
+                string x = movement[1];
+                string y = movement[2];
 
                 int numX = int.Parse(x);
                 int numY = int.Parse(y);
+
+
 
                 Console.WriteLine(x);
                 Console.WriteLine(y);
@@ -138,7 +160,26 @@ namespace GraphicalProgram
             //functionality for drawing rectangle to canvas 
             if (input.Contains("Rectangle"))
             {
-                g.DrawRectangle(pen, 20, 20, 50, 50);
+
+                try
+                {
+                    string[] moveRect = input.Split();
+                    string width = moveRect[1];
+                    string height = moveRect[2];
+
+                    int wid = int.Parse(width);
+                    int hei = int.Parse(height);
+
+                    Console.WriteLine(width);
+                    Console.WriteLine(height);
+
+                    g.DrawRectangle(pen, 0, 0, wid, hei);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("The Format should be like this - 'Rectangle 0 0'", "Rectangle Error!");
+                }
+
             }
 
             //functionality for drawing triangle to canvas 
@@ -196,7 +237,7 @@ namespace GraphicalProgram
             if (input.Contains("Pen Down"))
             {
                 pen.Color = Color.Red;
-                g.DrawRectangle(pen, 20, 20, 50, 50);
+                g.DrawRectangle(pen, 0, 0, 50, 50);
             }
 
 
