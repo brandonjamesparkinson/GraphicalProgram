@@ -60,8 +60,11 @@
             this.ylabel = new System.Windows.Forms.Label();
             this.xTxtbox = new System.Windows.Forms.TextBox();
             this.yTxtbox = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.statusBox = new System.Windows.Forms.TextBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.colLabel = new System.Windows.Forms.Label();
+            this.colourBox = new System.Windows.Forms.TextBox();
+            this.colourToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.canvasBox)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -223,7 +226,7 @@
             // helpToolStripMenuItem1
             // 
             this.helpToolStripMenuItem1.Name = "helpToolStripMenuItem1";
-            this.helpToolStripMenuItem1.Size = new System.Drawing.Size(133, 30);
+            this.helpToolStripMenuItem1.Size = new System.Drawing.Size(252, 30);
             this.helpToolStripMenuItem1.Text = "Help";
             this.helpToolStripMenuItem1.Click += new System.EventHandler(this.helpToolStripMenuItem1_Click);
             // 
@@ -233,7 +236,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.helpToolStripMenuItem,
-            this.aboutToolStripMenuItem});
+            this.aboutToolStripMenuItem,
+            this.colourToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
@@ -343,13 +347,13 @@
             this.yTxtbox.TabIndex = 14;
             this.yTxtbox.TextChanged += new System.EventHandler(this.yTxtbox_TextChanged);
             // 
-            // textBox1
+            // statusBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(37, 704);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(219, 26);
-            this.textBox1.TabIndex = 15;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.statusBox.Location = new System.Drawing.Point(37, 704);
+            this.statusBox.Name = "statusBox";
+            this.statusBox.Size = new System.Drawing.Size(111, 26);
+            this.statusBox.TabIndex = 15;
+            this.statusBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // statusStrip1
             // 
@@ -360,6 +364,29 @@
             this.statusStrip1.TabIndex = 16;
             this.statusStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStripStatusLabel1_ItemClicked);
             // 
+            // colLabel
+            // 
+            this.colLabel.AutoSize = true;
+            this.colLabel.Location = new System.Drawing.Point(203, 672);
+            this.colLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.colLabel.Name = "colLabel";
+            this.colLabel.Size = new System.Drawing.Size(95, 20);
+            this.colLabel.TabIndex = 17;
+            this.colLabel.Text = "Pen Colour :";
+            // 
+            // colourBox
+            // 
+            this.colourBox.Location = new System.Drawing.Point(207, 704);
+            this.colourBox.Name = "colourBox";
+            this.colourBox.Size = new System.Drawing.Size(111, 26);
+            this.colourBox.TabIndex = 18;
+            // 
+            // colourToolStripMenuItem
+            // 
+            this.colourToolStripMenuItem.Name = "colourToolStripMenuItem";
+            this.colourToolStripMenuItem.Size = new System.Drawing.Size(77, 29);
+            this.colourToolStripMenuItem.Text = "Colour";
+            // 
             // Form1
             // 
             this.AccessibleDescription = "A Graphical Program to create shapes.";
@@ -367,8 +394,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1468, 928);
+            this.Controls.Add(this.colourBox);
+            this.Controls.Add(this.colLabel);
             this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.statusBox);
             this.Controls.Add(this.yTxtbox);
             this.Controls.Add(this.xTxtbox);
             this.Controls.Add(this.ylabel);
@@ -427,13 +456,16 @@
         private System.Windows.Forms.Label ylabel;
         private System.Windows.Forms.TextBox xTxtbox;
         private System.Windows.Forms.TextBox yTxtbox;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox statusBox;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem circleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem triangleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem polygonToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem1;
         private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripMenuItem colourToolStripMenuItem;
+        private System.Windows.Forms.Label colLabel;
+        private System.Windows.Forms.TextBox colourBox;
     }
 }
 

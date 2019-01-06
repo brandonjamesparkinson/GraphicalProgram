@@ -99,7 +99,7 @@ namespace GraphicalProgram
         {
 
             ShapeFactory shapeFactory = new ShapeFactory();
-            Pen pen = new Pen(Color.Red);
+            Pen pen = new Pen(Color.Black);
             Graphics g = canvasBox.CreateGraphics();
             
             //take input and split 
@@ -118,16 +118,29 @@ namespace GraphicalProgram
                 g.DrawRectangle(pen, 20, 20, 50, 50);
             }
 
+            //functionality for drawing triangle to canvas 
+            if (input.Contains("Triangle"))
+            {
+                
+            }
+
+            //functionality for drawing Polygon to canvas 
+            if (input.Contains("Polygon"))
+            {
+                
+            }
+
             //functionality for pen up command 
             if (input.Contains("Pen Up"))
             {
-                
+                pen.Color = Color.White;
             }
 
             //functionality for pen down command
             if (input.Contains("Pen Down"))
             {
-
+                pen.Color = Color.Red;
+                g.DrawRectangle(pen, 20, 20, 50, 50);
             }
 
 
@@ -240,9 +253,9 @@ namespace GraphicalProgram
 
         private void helpToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-           
-
-            }
+            MessageBox.Show("This Program was built to help understand simple programming concepts.",
+                "Help");
+        }
 
         //functionality for command text box field 
         private void commandText_TextChanged(object sender, EventArgs e)
