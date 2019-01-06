@@ -350,6 +350,22 @@ namespace GraphicalProgram
         {
 
         }
+
+        private void newToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            DialogResult dialogResult = MessageBox.Show("Are You Sure You Want To Start Again?", "New", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                g.Clear(Color.White);
+                commandText.Clear();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                
+            }
+
+        }
     }
     }
 
