@@ -170,12 +170,14 @@
             this.tipsToolStripMenuItem.Name = "tipsToolStripMenuItem";
             this.tipsToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
             this.tipsToolStripMenuItem.Text = "Pen Up";
+            this.tipsToolStripMenuItem.Click += new System.EventHandler(this.tipsToolStripMenuItem_Click);
             // 
             // coloursToolStripMenuItem
             // 
             this.coloursToolStripMenuItem.Name = "coloursToolStripMenuItem";
             this.coloursToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
             this.coloursToolStripMenuItem.Text = "Pen Down";
+            this.coloursToolStripMenuItem.Click += new System.EventHandler(this.coloursToolStripMenuItem_Click);
             // 
             // shapesToolStripMenuItem
             // 
@@ -188,24 +190,28 @@
             this.commandsToolStripMenuItem.Name = "commandsToolStripMenuItem";
             this.commandsToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
             this.commandsToolStripMenuItem.Text = "Rectangle";
+            this.commandsToolStripMenuItem.Click += new System.EventHandler(this.commandsToolStripMenuItem_Click);
             // 
             // circleToolStripMenuItem
             // 
             this.circleToolStripMenuItem.Name = "circleToolStripMenuItem";
             this.circleToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
             this.circleToolStripMenuItem.Text = "Circle";
+            this.circleToolStripMenuItem.Click += new System.EventHandler(this.circleToolStripMenuItem_Click);
             // 
             // triangleToolStripMenuItem
             // 
             this.triangleToolStripMenuItem.Name = "triangleToolStripMenuItem";
             this.triangleToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
             this.triangleToolStripMenuItem.Text = "Triangle";
+            this.triangleToolStripMenuItem.Click += new System.EventHandler(this.triangleToolStripMenuItem_Click);
             // 
             // polygonToolStripMenuItem
             // 
             this.polygonToolStripMenuItem.Name = "polygonToolStripMenuItem";
             this.polygonToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
             this.polygonToolStripMenuItem.Text = "Polygon";
+            this.polygonToolStripMenuItem.Click += new System.EventHandler(this.polygonToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 

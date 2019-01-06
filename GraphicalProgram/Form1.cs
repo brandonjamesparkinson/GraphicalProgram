@@ -112,10 +112,23 @@ namespace GraphicalProgram
             Pen pen = new Pen(Color.Black);
             Graphics g = canvasBox.CreateGraphics();
 
+
             
             //take input and split 
             var input = commandText.Text;
             input.Split(new[] {"\r\n", "\r", "\n"}, StringSplitOptions.None);
+
+            //functionality for pen up command 
+            if (input.Contains("PenUp"))
+            {
+                pen.Color = Color.White;
+            }
+
+            //functionality for pen down command
+            else if (input.Contains("PenDown"))
+            {
+                pen.Color = Color.Black;
+            }
 
 
             //functionality for drawing circle to canvas 
@@ -158,6 +171,9 @@ namespace GraphicalProgram
                     g.DrawEllipse(pen, 30, 30, rad, rad);
                     g.DrawEllipse(pen, 40, 40, rad, rad);
                     g.DrawEllipse(pen, 50, 50, rad, rad);
+                    g.DrawEllipse(pen, 60, 60, rad, rad);
+                    g.DrawEllipse(pen, 70, 70, rad, rad);
+                    g.DrawEllipse(pen, 80, 80, rad, rad);
                 }
                 catch (Exception ex)
                 {
@@ -251,18 +267,6 @@ namespace GraphicalProgram
 
             }
 
-            //functionality for pen up command 
-            if (input.Contains("Pen Up"))
-            {
-                pen.Color = Color.White;
-            }
-
-            //functionality for pen down command
-            if (input.Contains("Pen Down"))
-            {
-                pen.Color = Color.Red;
-                g.DrawRectangle(pen, 0, 0, 50, 50);
-            }
 
 
             for (int i = 0; i < shapes.Count; i++)
@@ -395,19 +399,21 @@ namespace GraphicalProgram
                 
             }
 
+
+
         }
 
 
         //functionality for x coordinates
         private void xTxtbox_TextChanged(object sender, EventArgs e)
         {
-
+            xTxtbox.Text.IndexOf('x');
         }
 
         //functionality for y coordinates 
         private void yTxtbox_TextChanged(object sender, EventArgs e)
         {
-
+            xTxtbox.Text.IndexOf('y');
         }
 
         private void commandText_MouseHover(object sender, EventArgs e)
@@ -444,6 +450,42 @@ namespace GraphicalProgram
         private void colourBox_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void tipsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("This command will lift the pen and stop the user from being able to draw shapes or colour to the canvas.",
+                "Pen Up");
+        }
+
+        private void coloursToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("This command will place the pen on the canvas ans allow the user to draw shapes and colour to the canvas.",
+                "Pen Down");
+        }
+
+        private void commandsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("This command will allow the user to draw a Rectangle to the Canvas. A Rectangle needs an x and y coordinate. Use this like 'Rectangle 50 50'.",
+                "Rectangle");
+        }
+
+        private void circleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("This command will allow the user to draw a Circle to the Canvas. A Circle needs an x and y coordinate. Use this like 'Circle 50 50'.",
+                "Circle");
+        }
+
+        private void triangleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("This command will allow the user to draw a Triangle to the Canvas. A Triangle is simply drawn to the canvas like this 'Triangle'",
+                "Triangle");
+        }
+
+        private void polygonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("This command will allow the user to draw a Polygon to the Canvas. A Polygon is simply drawn to the canvas like this 'Polygon",
+                "Polygon");
         }
     }
     }
