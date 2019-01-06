@@ -16,9 +16,11 @@ namespace GraphicalProgram
     {
 
         private System.Drawing.Graphics g;
-        //private System.Drawing.Pen pen1 = new System.Drawing.Pen(Color.Blue.2);
         private ArrayList shapes = new ArrayList();
+        private static Pen activePen;
+
         bool penPosition = false;
+
 
         public Form1()
         {
@@ -134,6 +136,32 @@ namespace GraphicalProgram
                 catch (Exception ex)
                 {
                     MessageBox.Show("The Format should be like this - 'Circle 0 0'", "Circle Error!");
+                }
+            }
+
+            //functionality for drawing circle to canvas 
+            if (input.Contains("Repeat"))
+            {
+
+                try
+                {
+                    string[] moveCircle = input.Split();
+                    string radius = moveCircle[1];
+
+                    int rad = int.Parse(radius);
+
+                    Console.WriteLine(radius);
+
+                    g.DrawEllipse(pen, 0, 0, rad, rad);
+                    g.DrawEllipse(pen, 10, 10, rad, rad);
+                    g.DrawEllipse(pen, 20, 20, rad, rad);
+                    g.DrawEllipse(pen, 30, 30, rad, rad);
+                    g.DrawEllipse(pen, 40, 40, rad, rad);
+                    g.DrawEllipse(pen, 50, 50, rad, rad);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("The Format should be like this - 'Repeat 0 0'", "Repeat Error!");
                 }
             }
 
