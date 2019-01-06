@@ -131,6 +131,8 @@ namespace GraphicalProgram
         //functionality for clearing canvas 
         private void canvasButton_Click(object sender, EventArgs e)
         {
+            g.Clear(Color.White);
+
         }
 
         private void canvasBox_Click(object sender, EventArgs e)
