@@ -121,7 +121,18 @@ namespace GraphicalProgram
             //functionality for drawing triangle to canvas 
             if (input.Contains("Triangle"))
             {
-                
+                // Create points that define polygon.
+                Point point1 = new Point(0, 50);
+                Point point2 = new Point(50, 0);
+                Point point3 = new Point(50, 100);
+                Point[] curvePoints =
+                {
+                    point1,
+                    point2,
+                    point3,
+                };
+                // Draw polygon to screen.
+                g.DrawPolygon(pen, curvePoints);
             }
 
             //functionality for drawing Polygon to canvas 
