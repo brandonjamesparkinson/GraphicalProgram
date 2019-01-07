@@ -1,13 +1,7 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GraphicalProgram
@@ -24,8 +18,10 @@ namespace GraphicalProgram
 
         public Form1()
         {
+
+            
             InitializeComponent();
-            g = canvasBox.CreateGraphics();
+            g = canvasBox.CreateGraphics(); //allows graphics to be drawn onto graphics panel
 
 
             ShapeFactory factory = new ShapeFactory();
@@ -34,11 +30,12 @@ namespace GraphicalProgram
                 shapes.Add(factory.getShape("circle"));
                 shapes.Add(factory.getShape("triangle"));
                 shapes.Add(factory.getShape("rectangle"));
+                shapes.Add(factory.getShape("polygon"));
 
             }
-            catch (ArgumentException e)
+            catch (ArgumentException e)  //throw argument if invalid shape added. rather than exit or cancel program
             {
-                Console.WriteLine("Invalid shape: " + e);
+                Console.WriteLine("Invalid shape: " + e);  
 
             }
 
@@ -453,7 +450,7 @@ namespace GraphicalProgram
         //functionality for pen status (up or down) (changing colour based on pen being in use or not)
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            if (penPosition = false) ;
+            if (penPosition = false);
             {
                 
             }
