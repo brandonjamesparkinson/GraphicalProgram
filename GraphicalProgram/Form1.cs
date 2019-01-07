@@ -13,8 +13,11 @@ namespace GraphicalProgram
         private ArrayList shapes = new ArrayList();
         private static Pen activePen;
 
-        bool penPosition = false;
+        private 
 
+        bool penPosition = false;
+        int X = 0;
+        int Y = 0;
 
         public Form1()
         {
@@ -242,6 +245,28 @@ namespace GraphicalProgram
 
                 Console.WriteLine(x);
                 Console.WriteLine(y);
+
+            }
+
+            if (input.Contains("Move"))
+            {
+                string[] movement = input.Split();
+                string x = movement[1];
+                string y = movement[2];
+
+                int numX = int.Parse(x);
+                int numY = int.Parse(y);
+
+                Console.WriteLine(x);
+                Console.WriteLine(y);
+
+                g.DrawLine(pen, X, Y, numX, numY);
+                Y = numX;
+                X = numY;
+            }
+
+            for (int i = 0; i < shapes.Count; i++)
+            {
 
             }
 
