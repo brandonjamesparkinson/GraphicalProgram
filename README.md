@@ -30,26 +30,6 @@ Open the ZIP Directory in Microsoft Visual Studio
 Run the program
 ```
 
-## Running the tests
-
-Some tests were created to test some of the functionality. 
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
 ## Deployment
 
 This will work on any live system running an up to date version of Windows and Microsoft Visual Studio.
