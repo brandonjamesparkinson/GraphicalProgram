@@ -108,23 +108,32 @@ namespace GraphicalProgram
         private void button1_Click(object sender, EventArgs e)
         {
 
+            //instantiate new shape factory previously created 
             ShapeFactory shapeFactory = new ShapeFactory();
+
+            //create new pen with default color set to black 
             Pen pen = new Pen(Color.Black);
+
+            //allows graphics to be drawn to set picturebox 
             Graphics g = canvasBox.CreateGraphics();
 
 
             
             //take input and split 
+            //allows multiple lines or commands to be entered at once 
             var input = commandText.Text;
             input.Split(new[] {"\r\n", "\r", "\n"}, StringSplitOptions.None);
 
             //functionality for pen up command 
+            //canvas colour is set to White. Pen up color set to white, until workaround or appropriate function found.
             if (input.Contains("PenUp"))
             {
                 pen.Color = Color.White;
             }
 
             //functionality for pen down command
+            //when pen down the default colour is black 
+            //hardcoded black (unless changed)
             else if (input.Contains("PenDown"))
             {
                 pen.Color = Color.Black;
@@ -153,6 +162,10 @@ namespace GraphicalProgram
             }
 
             //functionality for drawing circle to canvas 
+            //rather than height and width, radius is used 
+            //moves circle based on command input 
+            //changes size based on given value from command prompt 
+            //repeats the circle to canvas hardcoded 
             if (input.Contains("RepeatCirc"))
             {
 
@@ -181,7 +194,12 @@ namespace GraphicalProgram
                 }
             }
 
-            //functionality for drawing circle to canvas 
+            //functionality for drawing repeat rectangle to canvas 
+            //takes variables for moving rectangle and the split string input 
+            //takes variable for width and height 
+            //parses variables for height and width 
+            //publishes writeline for width and height 
+            //draws repeated rectangle to canvas (hardcoded) 
             if (input.Contains("RepeatRect"))
             {
 
@@ -214,6 +232,7 @@ namespace GraphicalProgram
             }
 
             //functionality for moving pen via coordinates of x and y
+            //writes movement to console for 'x' and 'y' axis
             if (input.Contains("move"))
             {
                 string[] movement = input.Split();
@@ -229,7 +248,12 @@ namespace GraphicalProgram
 
             }
 
-            //functionality for drawing rectangle to canvas 
+            //functionality for drawing rectangle to canvas
+            //takes variables for moving the rectangle and splits
+            //takes variable for height and width 
+            //parses both variables for height and width 
+            //pushes width and height to writeline to show functionality 
+            //draws rectangle based on pen, pen position, and the variables for size (width and height) set from command prompt
             if (input.Contains("Rectangle"))
             {
 
@@ -332,6 +356,8 @@ namespace GraphicalProgram
           
         }
 
+        //functionality for exiting the application when clicking 'x' in right corner
+        //if the user presses yes, application ends, if they press no, dialog closes
         private void exitToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             const string message = "Do you want to exit?";
@@ -356,8 +382,8 @@ namespace GraphicalProgram
 
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
-                openFileDialog.InitialDirectory = "c:\\";
-                openFileDialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+                openFileDialog.InitialDirectory = "c:\\"; //assumes default directory is c:\\
+                openFileDialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*"; //types of file formats available to be used or saved as
                 openFileDialog.FilterIndex = 2;
                 openFileDialog.RestoreDirectory = true;
 
@@ -380,6 +406,7 @@ namespace GraphicalProgram
             MessageBox.Show(fileContent, "File Content at path: " + filePath, MessageBoxButtons.OK);
         }
 
+        //functionality for saving document with save dialog prompt 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -448,21 +475,25 @@ namespace GraphicalProgram
             xTxtbox.Text.IndexOf('y');
         }
 
+        //toolstrip prompt when hovering over command box entry to show 'Enter Commands Here'
         private void commandText_MouseHover(object sender, EventArgs e)
         {
             statusStrip1.Text = "Enter Commands Here";
         }
 
+        //moves to blank in toolstrip when not hovering over object 
         private void commandText_MouseLeave(object sender, EventArgs e)
         {
             statusStrip1.Text = "";
         }
+
 
         private void toolStripStatusLabel1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
         }
 
+        //prompt for starting 'new' or clicking 'new' from 'file'
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -484,36 +515,41 @@ namespace GraphicalProgram
 
         }
 
+        //prompt for clicking pen up info
         private void tipsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("This command will lift the pen and stop the user from being able to draw shapes or colour to the canvas.",
                 "Pen Up");
         }
-
+        //prompt for clicking pen down info
         private void coloursToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("This command will place the pen on the canvas ans allow the user to draw shapes and colour to the canvas.",
                 "Pen Down");
         }
 
+        //prompt for clicking rectangle info
         private void commandsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("This command will allow the user to draw a Rectangle to the Canvas. A Rectangle needs an x and y coordinate. Use this like 'Rectangle 50 50'.",
                 "Rectangle");
         }
 
+        //prompt for clicking circle info
         private void circleToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("This command will allow the user to draw a Circle to the Canvas. A Circle needs an x and y coordinate. Use this like 'Circle 50 50'.",
                 "Circle");
         }
 
+        //prompt fir clicking triangle info
         private void triangleToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("This command will allow the user to draw a Triangle to the Canvas. A Triangle is simply drawn to the canvas like this 'Triangle'",
                 "Triangle");
         }
 
+        //prompt for clicking polygon info
         private void polygonToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("This command will allow the user to draw a Polygon to the Canvas. A Polygon is simply drawn to the canvas like this 'Polygon",
