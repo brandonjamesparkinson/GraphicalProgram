@@ -126,211 +126,231 @@ namespace GraphicalProgram
 
             //functionality for pen up command 
             //canvas colour is set to White. Pen up color set to white, until workaround or appropriate function found.
-            if (input.Contains("PenUp"))
+            if (penPosition.Equals(false))
             {
+               
                 pen.Color = Color.White;
+
+                if (input.Contains("Move"))
+                {
+                    string[] movement = input.Split();
+                    string x = movement[1];
+                    string y = movement[2];
+
+                    int numX = int.Parse(x);
+                    int numY = int.Parse(y);
+
+                    Console.WriteLine(x);
+                    Console.WriteLine(y);
+
+                    Y = numX;
+                    X = numY;
+                }
+
+
             }
 
             //functionality for pen down command
             //when pen down the default colour is black 
             //hardcoded black (unless changed)
-            else if (input.Contains("PenDown"))
+            if (penPosition.Equals(true))
+
+            
             {
+                
                 pen.Color = Color.Black;
-            }
 
-
-            //functionality for drawing circle to canvas 
-            if (input.Contains("Circle"))
-            {
-
-                try
+                //functionality for drawing circle to canvas 
+                if (input.Contains("Circle"))
                 {
-                    string[] moveCircle = input.Split();
-                    string radius = moveCircle[1];
 
-                    int rad = int.Parse(radius);
+                    try
+                    {
+                        string[] moveCircle = input.Split();
+                        string radius = moveCircle[1];
 
-                    Console.WriteLine(radius);
+                        int rad = int.Parse(radius);
 
-                    g.DrawEllipse(pen, 0, 0, rad, rad);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("The Format should be like this - 'Circle 0 0'", "Circle Error!");
-                }
-            }
+                        Console.WriteLine(radius);
 
-            //functionality for drawing circle to canvas 
-            //rather than height and width, radius is used 
-            //moves circle based on command input 
-            //changes size based on given value from command prompt 
-            //repeats the circle to canvas hardcoded 
-            if (input.Contains("RepeatCirc"))
-            {
-
-                try
-                {
-                    string[] moveCircle = input.Split();
-                    string radius = moveCircle[1];
-
-                    int rad = int.Parse(radius);
-
-                    Console.WriteLine(radius);
-
-                    g.DrawEllipse(pen, 0, 0, rad, rad);
-                    g.DrawEllipse(pen, 10, 10, rad, rad);
-                    g.DrawEllipse(pen, 20, 20, rad, rad);
-                    g.DrawEllipse(pen, 30, 30, rad, rad);
-                    g.DrawEllipse(pen, 40, 40, rad, rad);
-                    g.DrawEllipse(pen, 50, 50, rad, rad);
-                    g.DrawEllipse(pen, 60, 60, rad, rad);
-                    g.DrawEllipse(pen, 70, 70, rad, rad);
-                    g.DrawEllipse(pen, 80, 80, rad, rad);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("The Format should be like this - 'RepeatCirc 0 0'", "Repeat Circle Error!");
-                }
-            }
-
-            //functionality for drawing repeat rectangle to canvas 
-            //takes variables for moving rectangle and the split string input 
-            //takes variable for width and height 
-            //parses variables for height and width 
-            //publishes writeline for width and height 
-            //draws repeated rectangle to canvas (hardcoded) 
-            if (input.Contains("RepeatRect"))
-            {
-
-
-                try
-                {
-                    var moveRect = input.Split();
-                    var width = moveRect[1];
-                    var height = moveRect[2];
-
-                    var wid = int.Parse(width);
-                    var hei = int.Parse(height);
-
-                    Console.WriteLine(width);
-                    Console.WriteLine(height);
-
-                    g.DrawRectangle(pen, 0, 0, wid, hei);
-                    g.DrawRectangle(pen, 10, 10, wid, hei);
-                    g.DrawRectangle(pen, 20, 20, wid, hei);
-                    g.DrawRectangle(pen, 30, 30, wid, hei);
-                    g.DrawRectangle(pen, 40, 40, wid, hei);
-                    g.DrawRectangle(pen, 50, 50, wid, hei);
-                    g.DrawRectangle(pen, 60, 60, wid, hei);
-                    g.DrawRectangle(pen, 70, 70, wid, hei);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("The Format should be like this - 'RepeatRect 0 0'", "Repeat Rectangle Error!");
-                }
-            }
-
-            //functionality for moving pen via coordinates of x and y
-            //writes movement to console for 'x' and 'y' axis
-            if (input.Contains("move"))
-            {
-                string[] movement = input.Split();
-                string x = movement[1];
-                string y = movement[2];
-
-                int numX = int.Parse(x);
-                int numY = int.Parse(y);
-
-
-                Console.WriteLine(x);
-                Console.WriteLine(y);
-
-            }
-
-            if (input.Contains("Move"))
-            {
-                string[] movement = input.Split();
-                string x = movement[1];
-                string y = movement[2];
-
-                int numX = int.Parse(x);
-                int numY = int.Parse(y);
-
-                Console.WriteLine(x);
-                Console.WriteLine(y);
-
-                g.DrawLine(pen, X, Y, numX, numY);
-                Y = numX;
-                X = numY;
-            }
-
-            for (int i = 0; i < shapes.Count; i++)
-            {
-
-            }
-
-            //functionality for drawing rectangle to canvas
-            //takes variables for moving the rectangle and splits
-            //takes variable for height and width 
-            //parses both variables for height and width 
-            //pushes width and height to writeline to show functionality 
-            //draws rectangle based on pen, pen position, and the variables for size (width and height) set from command prompt
-            if (input.Contains("Rectangle"))
-            {
-
-                try
-                {
-                    var moveRect = input.Split();
-                    var width = moveRect[1];
-                    var height = moveRect[2];
-
-                    var wid = int.Parse(width);
-                    var hei = int.Parse(height);
-
-                    Console.WriteLine(width);
-                    Console.WriteLine(height);
-
-                    g.DrawRectangle(pen, 0, 0, wid, hei);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("The Format should be like this - 'Rectangle 0 0'", "Rectangle Error!");
+                        g.DrawEllipse(pen, X, Y, rad, rad);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("The Format should be like this - 'Circle 0 0'", "Circle Error!");
+                    }
                 }
 
-            }
-
-            //functionality for drawing triangle to canvas 
-            if (input.Contains("Triangle"))
-            {
-                // Create points that define polygon.
-                Point point1 = new Point(0, 50);
-                Point point2 = new Point(50, 0);
-                Point point3 = new Point(50, 100);
-                Point[] curvePoints =
+                //functionality for drawing circle to canvas 
+                //rather than height and width, radius is used 
+                //moves circle based on command input 
+                //changes size based on given value from command prompt 
+                //repeats the circle to canvas hardcoded 
+                if (input.Contains("RepeatCirc"))
                 {
+
+                    try
+                    {
+                        string[] moveCircle = input.Split();
+                        string radius = moveCircle[1];
+
+                        int rad = int.Parse(radius);
+
+                        Console.WriteLine(radius);
+
+                        g.DrawEllipse(pen, 0, 0, rad, rad);
+                        g.DrawEllipse(pen, 10, 10, rad, rad);
+                        g.DrawEllipse(pen, 20, 20, rad, rad);
+                        g.DrawEllipse(pen, 30, 30, rad, rad);
+                        g.DrawEllipse(pen, 40, 40, rad, rad);
+                        g.DrawEllipse(pen, 50, 50, rad, rad);
+                        g.DrawEllipse(pen, 60, 60, rad, rad);
+                        g.DrawEllipse(pen, 70, 70, rad, rad);
+                        g.DrawEllipse(pen, 80, 80, rad, rad);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("The Format should be like this - 'RepeatCirc 0 0'", "Repeat Circle Error!");
+                    }
+                }
+
+                //functionality for drawing repeat rectangle to canvas 
+                //takes variables for moving rectangle and the split string input 
+                //takes variable for width and height 
+                //parses variables for height and width 
+                //publishes writeline for width and height 
+                //draws repeated rectangle to canvas (hardcoded) 
+                if (input.Contains("RepeatRect"))
+                {
+
+
+                    try
+                    {
+                        var moveRect = input.Split();
+                        var width = moveRect[1];
+                        var height = moveRect[2];
+
+                        var wid = int.Parse(width);
+                        var hei = int.Parse(height);
+
+                        Console.WriteLine(width);
+                        Console.WriteLine(height);
+
+                        g.DrawRectangle(pen, 0, 0, wid, hei);
+                        g.DrawRectangle(pen, 10, 10, wid, hei);
+                        g.DrawRectangle(pen, 20, 20, wid, hei);
+                        g.DrawRectangle(pen, 30, 30, wid, hei);
+                        g.DrawRectangle(pen, 40, 40, wid, hei);
+                        g.DrawRectangle(pen, 50, 50, wid, hei);
+                        g.DrawRectangle(pen, 60, 60, wid, hei);
+                        g.DrawRectangle(pen, 70, 70, wid, hei);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("The Format should be like this - 'RepeatRect 0 0'", "Repeat Rectangle Error!");
+                    }
+                }
+
+                //functionality for moving pen via coordinates of x and y
+                //writes movement to console for 'x' and 'y' axis
+                if (input.Contains("move"))
+                {
+                    string[] movement = input.Split();
+                    string x = movement[1];
+                    string y = movement[2];
+
+                    int numX = int.Parse(x);
+                    int numY = int.Parse(y);
+
+
+                    Console.WriteLine(x);
+                    Console.WriteLine(y);
+
+                }
+
+                if (input.Contains("Move"))
+                {
+                    string[] movement = input.Split();
+                    string x = movement[1];
+                    string y = movement[2];
+
+                    int numX = int.Parse(x);
+                    int numY = int.Parse(y);
+
+                    Console.WriteLine(x);
+                    Console.WriteLine(y);
+
+                    g.DrawLine(pen, X, Y, numX, numY);
+                    Y = numX;
+                    X = numY;
+                }
+
+                for (int i = 0; i < shapes.Count; i++)
+                {
+
+                }
+
+                //functionality for drawing rectangle to canvas
+                //takes variables for moving the rectangle and splits
+                //takes variable for height and width 
+                //parses both variables for height and width 
+                //pushes width and height to writeline to show functionality 
+                //draws rectangle based on pen, pen position, and the variables for size (width and height) set from command prompt
+                if (input.Contains("Rectangle"))
+                {
+
+                    try
+                    {
+                        var moveRect = input.Split();
+                        var width = moveRect[1];
+                        var height = moveRect[2];
+
+                        var wid = int.Parse(width);
+                        var hei = int.Parse(height);
+
+                        Console.WriteLine(width);
+                        Console.WriteLine(height);
+
+                        g.DrawRectangle(pen, 0, 0, wid, hei);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("The Format should be like this - 'Rectangle 0 0'", "Rectangle Error!");
+                    }
+
+                }
+
+                //functionality for drawing triangle to canvas 
+                if (input.Contains("Triangle"))
+                {
+                    // Create points that define polygon.
+                    Point point1 = new Point(0, 50);
+                    Point point2 = new Point(50, 0);
+                    Point point3 = new Point(50, 100);
+                    Point[] curvePoints =
+                    {
                     point1,
                     point2,
                     point3,
                 };
-                // Draw polygon to screen.
-                g.DrawPolygon(pen, curvePoints);
-            }
-        
-            //functionality for drawing Polygon to canvas 
-            if (input.Contains("Polygon"))
-            {
+                    // Draw polygon to screen.
+                    g.DrawPolygon(pen, curvePoints);
+                }
 
-                // Create points that define polygon.
-                Point point1 = new Point(50, 50);
-                Point point2 = new Point(100, 25);
-                Point point3 = new Point(200, 5);
-                Point point4 = new Point(250, 50);
-                Point point5 = new Point(300, 100);
-                Point point6 = new Point(350, 200);
-                Point point7 = new Point(250, 250);
-                Point[] curvePoints =
+                //functionality for drawing Polygon to canvas 
+                if (input.Contains("Polygon"))
                 {
+
+                    // Create points that define polygon.
+                    Point point1 = new Point(50, 50);
+                    Point point2 = new Point(100, 25);
+                    Point point3 = new Point(200, 5);
+                    Point point4 = new Point(250, 50);
+                    Point point5 = new Point(300, 100);
+                    Point point6 = new Point(350, 200);
+                    Point point7 = new Point(250, 250);
+                    Point[] curvePoints =
+                    {
                     point1,
                     point2,
                     point3,
@@ -340,17 +360,21 @@ namespace GraphicalProgram
                     point7
                 };
 
-                // Draw polygon to screen.
-                g.DrawPolygon(pen, curvePoints);
+                    // Draw polygon to screen.
+                    g.DrawPolygon(pen, curvePoints);
 
+                }
+
+
+
+                for (int i = 0; i < shapes.Count; i++)
+                {
+
+                }
             }
 
 
 
-            for (int i = 0; i < shapes.Count; i++)
-            {
-
-            }
 
         }
 
@@ -540,14 +564,18 @@ namespace GraphicalProgram
         //prompt for clicking pen up info
         private void tipsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("This command will lift the pen and stop the user from being able to draw shapes or colour to the canvas.",
+            MessageBox.Show("You have lifted the Pen from the Canvas.",
                 "Pen Up");
+
+            penPosition = false;
         }
         //prompt for clicking pen down info
         private void coloursToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("This command will place the pen on the canvas ans allow the user to draw shapes and colour to the canvas.",
+            MessageBox.Show("You have put the pen on the Canvas.",
                 "Pen Down");
+
+            penPosition = true;
         }
 
         //prompt for clicking rectangle info
