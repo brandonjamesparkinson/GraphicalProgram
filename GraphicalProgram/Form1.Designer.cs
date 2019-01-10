@@ -1,5 +1,23 @@
-﻿namespace GraphicalProgram
+﻿// ***********************************************************************
+// Assembly         : GraphicalProgram
+// Author           : Brandon
+// Created          : 11-13-2018
+//
+// Last Modified By : Brandon
+// Last Modified On : 01-06-2019
+// ***********************************************************************
+// <copyright file="Form1.Designer.cs" company="">
+//     Copyright ©  2018
+// </copyright>
+// <summary></summary>
+// ***********************************************************************
+namespace GraphicalProgram
 {
+    /// <summary>
+    /// Class Form1.
+    /// Implements the <see cref="System.Windows.Forms.Form" />
+    /// </summary>
+    /// <seealso cref="System.Windows.Forms.Form" />
     partial class Form1
     {
         /// <summary>
@@ -429,40 +447,145 @@
         }
 
         #endregion
+        /// <summary>
+        /// The canvas box
+        /// </summary>
         private System.Windows.Forms.PictureBox canvasBox;
+        /// <summary>
+        /// The canvas label
+        /// </summary>
         private System.Windows.Forms.Label canvasLabel;
+        /// <summary>
+        /// The command label
+        /// </summary>
         private System.Windows.Forms.Label cmdLabel;
+        /// <summary>
+        /// The command text
+        /// </summary>
         private System.Windows.Forms.TextBox commandText;
+        /// <summary>
+        /// The file tool strip menu item
+        /// </summary>
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        /// <summary>
+        /// The new tool strip menu item
+        /// </summary>
         private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
+        /// <summary>
+        /// The save tool strip menu item
+        /// </summary>
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
+        /// <summary>
+        /// The load tool strip menu item
+        /// </summary>
         private System.Windows.Forms.ToolStripMenuItem loadToolStripMenuItem;
+        /// <summary>
+        /// The help tool strip menu item
+        /// </summary>
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        /// <summary>
+        /// The tips tool strip menu item
+        /// </summary>
         private System.Windows.Forms.ToolStripMenuItem tipsToolStripMenuItem;
+        /// <summary>
+        /// The colours tool strip menu item
+        /// </summary>
         private System.Windows.Forms.ToolStripMenuItem coloursToolStripMenuItem;
+        /// <summary>
+        /// The shapes tool strip menu item
+        /// </summary>
         private System.Windows.Forms.ToolStripMenuItem shapesToolStripMenuItem;
+        /// <summary>
+        /// The commands tool strip menu item
+        /// </summary>
         private System.Windows.Forms.ToolStripMenuItem commandsToolStripMenuItem;
+        /// <summary>
+        /// The about tool strip menu item
+        /// </summary>
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        /// <summary>
+        /// The menu strip1
+        /// </summary>
         private System.Windows.Forms.MenuStrip menuStrip1;
+        /// <summary>
+        /// The draw button
+        /// </summary>
         private System.Windows.Forms.Button drawButton;
+        /// <summary>
+        /// The text button
+        /// </summary>
         private System.Windows.Forms.Button textButton;
+        /// <summary>
+        /// The canvas button
+        /// </summary>
         private System.Windows.Forms.Button canvasButton;
+        /// <summary>
+        /// The tools label
+        /// </summary>
         private System.Windows.Forms.Label toolsLabel;
+        /// <summary>
+        /// The pen label
+        /// </summary>
         private System.Windows.Forms.Label penLabel;
+        /// <summary>
+        /// The cd label
+        /// </summary>
         private System.Windows.Forms.Label cdLabel;
+        /// <summary>
+        /// The xlabel
+        /// </summary>
         private System.Windows.Forms.Label xlabel;
+        /// <summary>
+        /// The ylabel
+        /// </summary>
         private System.Windows.Forms.Label ylabel;
+        /// <summary>
+        /// The x txtbox
+        /// </summary>
         private System.Windows.Forms.TextBox xTxtbox;
+        /// <summary>
+        /// The y txtbox
+        /// </summary>
         private System.Windows.Forms.TextBox yTxtbox;
+        /// <summary>
+        /// The status box
+        /// </summary>
         private System.Windows.Forms.TextBox statusBox;
+        /// <summary>
+        /// The exit tool strip menu item1
+        /// </summary>
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem1;
+        /// <summary>
+        /// The circle tool strip menu item
+        /// </summary>
         private System.Windows.Forms.ToolStripMenuItem circleToolStripMenuItem;
+        /// <summary>
+        /// The triangle tool strip menu item
+        /// </summary>
         private System.Windows.Forms.ToolStripMenuItem triangleToolStripMenuItem;
+        /// <summary>
+        /// The polygon tool strip menu item
+        /// </summary>
         private System.Windows.Forms.ToolStripMenuItem polygonToolStripMenuItem;
+        /// <summary>
+        /// The help tool strip menu item1
+        /// </summary>
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem1;
+        /// <summary>
+        /// The status strip1
+        /// </summary>
         private System.Windows.Forms.StatusStrip statusStrip1;
+        /// <summary>
+        /// The colour tool strip menu item
+        /// </summary>
         private System.Windows.Forms.ToolStripMenuItem colourToolStripMenuItem;
+        /// <summary>
+        /// The col label
+        /// </summary>
         private System.Windows.Forms.Label colLabel;
+        /// <summary>
+        /// The colour box
+        /// </summary>
         private System.Windows.Forms.TextBox colourBox;
     }
 }

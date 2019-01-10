@@ -1,4 +1,17 @@
-﻿using System.Reflection;
+﻿// ***********************************************************************
+// Assembly         : GraphicalProgram
+// Author           : Brandon
+// Created          : 11-13-2018
+//
+// Last Modified By : Brandon
+// Last Modified On : 11-13-2018
+// ***********************************************************************
+// <copyright file="AssemblyInfo.cs" company="">
+//     Copyright ©  2018
+// </copyright>
+// <summary></summary>
+// ***********************************************************************
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 

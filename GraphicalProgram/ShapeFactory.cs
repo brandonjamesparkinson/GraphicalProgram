@@ -1,4 +1,17 @@
-﻿using System;
+﻿// ***********************************************************************
+// Assembly         : GraphicalProgram
+// Author           : Brandon
+// Created          : 01-05-2019
+//
+// Last Modified By : Brandon
+// Last Modified On : 01-06-2019
+// ***********************************************************************
+// <copyright file="ShapeFactory.cs" company="">
+//     Copyright ©  2018
+// </copyright>
+// <summary></summary>
+// ***********************************************************************
+using System;
 
 namespace GraphicalProgram
 {
@@ -6,8 +19,16 @@ namespace GraphicalProgram
     //class for Shape Factory
     //following the factory design pattern 
     //a factory creates objects. this is implemented in c# programs. 
+    /// <summary>
+    /// Class ShapeFactory.
+    /// </summary>
     class ShapeFactory
     {
+        /// <summary>
+        /// Gets the shape.
+        /// </summary>
+        /// <param name="shapeType">Type of the shape.</param>
+        /// <returns>Shape.</returns>
         public Shape getShape(String shapeType)
         {
             shapeType = shapeType.ToUpper().Trim(); //you could argue that you want a specific word string to create an object but I'm allowing any case combination
