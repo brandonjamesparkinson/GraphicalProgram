@@ -128,7 +128,7 @@ namespace GraphicalProgram
             //canvas colour is set to White. Pen up color set to white, until workaround or appropriate function found.
             if (penPosition.Equals(false))
             {
-               
+               statusBox.BackColor = Color.AliceBlue;
                 pen.Color = Color.White;
 
                 if (input.Contains("Move"))
@@ -311,7 +311,7 @@ namespace GraphicalProgram
                         Console.WriteLine(width);
                         Console.WriteLine(height);
 
-                        g.DrawRectangle(pen, 0, 0, wid, hei);
+                        g.DrawRectangle(pen, X, Y, wid, hei);
                     }
                     catch (Exception ex)
                     {
@@ -499,13 +499,7 @@ namespace GraphicalProgram
         //functionality for pen status (up or down) (changing colour based on pen being in use or not)
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            if (penPosition = false);
-            {
-                
-            }
-
-
-
+            
         }
 
 
