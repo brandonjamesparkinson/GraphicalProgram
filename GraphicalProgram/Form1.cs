@@ -26,7 +26,9 @@ namespace GraphicalProgram
             InitializeComponent();
             g = canvasBox.CreateGraphics(); //allows graphics to be drawn onto graphics panel
 
-
+            //<summary>
+            //adds shapes from shape factory to class
+            //</summary>
             ShapeFactory factory = new ShapeFactory();
             try
             {
@@ -42,7 +44,10 @@ namespace GraphicalProgram
 
             }
 
+
+            //<summary>
             //add some random shapes
+            //</summary>
             Random rand = new Random(77887);
             for (int i = 0; i < 150; i++)
             {
@@ -118,9 +123,10 @@ namespace GraphicalProgram
             Graphics g = canvasBox.CreateGraphics();
 
 
-            
+            //<summary>
             //take input and split 
             //allows multiple lines or commands to be entered at once 
+            //</summary>
             var input = commandText.Text;
             input.Split(new[] {"\r\n", "\r", "\n"}, StringSplitOptions.None);
 
@@ -251,8 +257,10 @@ namespace GraphicalProgram
                     }
                 }
 
+                //<summary>
                 //functionality for moving pen via coordinates of x and y
                 //writes movement to console for 'x' and 'y' axis
+                //</summary>
                 if (input.Contains("move"))
                 {
                     string[] movement = input.Split();
@@ -290,12 +298,14 @@ namespace GraphicalProgram
 
                 }
 
+                //<summary>
                 //functionality for drawing rectangle to canvas
                 //takes variables for moving the rectangle and splits
                 //takes variable for height and width 
                 //parses both variables for height and width 
                 //pushes width and height to writeline to show functionality 
                 //draws rectangle based on pen, pen position, and the variables for size (width and height) set from command prompt
+                //</summary>
                 if (input.Contains("Rectangle"))
                 {
 
