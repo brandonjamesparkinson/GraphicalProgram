@@ -36,7 +36,7 @@ This will work on any live system running an up to date version of Windows and M
 
 ## Built With
 
-* [Microsoft Visuall Studio](https://visualstudio.microsoft.com/) - The IDE used to build this program. 
+* [Microsoft Visual Studio](https://visualstudio.microsoft.com/) - The IDE used to build this program. 
 
 
 ## Authors
