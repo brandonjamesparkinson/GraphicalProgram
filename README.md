@@ -1,6 +1,6 @@
 # Graphical Program - C#
 
-This program is based around the idea of teaching smple programming concepts. The language that was used to build this project is C#, and the program will have the basics of sequence, selection, and iteration, which will allow a student programmer to explore these concepts using graphics. 
+This program is used to demonstrate examples of being able to teach simple programming concepts. The language that was used to build this project is C#, and the program will have the basics of sequence, selection, and iteration, which will allow a student programmer to explore these concepts using graphics. 
 
 ## How to Use 
 
