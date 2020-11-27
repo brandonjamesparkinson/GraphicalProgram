@@ -8,3 +8,13 @@ C:\Users\Brandon\source\repos\GraphicalProgram\GraphicalProgram\obj\Debug\Graphi
 C:\Users\Brandon\source\repos\GraphicalProgram\GraphicalProgram\obj\Debug\GraphicalProgram.csproj.CoreCompileInputs.cache
 C:\Users\Brandon\source\repos\GraphicalProgram\GraphicalProgram\obj\Debug\GraphicalProgram.exe
 C:\Users\Brandon\source\repos\GraphicalProgram\GraphicalProgram\obj\Debug\GraphicalProgram.pdb
+C:\Data\GraphicalProgram\GraphicalProgram\GraphicalProgram\bin\Debug\GraphicalProgram.exe.config
+C:\Data\GraphicalProgram\GraphicalProgram\GraphicalProgram\bin\Debug\GraphicalProgram.exe
+C:\Data\GraphicalProgram\GraphicalProgram\GraphicalProgram\bin\Debug\GraphicalProgram.pdb
+C:\Data\GraphicalProgram\GraphicalProgram\GraphicalProgram\obj\Debug\GraphicalProgram.csprojAssemblyReference.cache
+C:\Data\GraphicalProgram\GraphicalProgram\GraphicalProgram\obj\Debug\GraphicalProgram.Form1.resources
+C:\Data\GraphicalProgram\GraphicalProgram\GraphicalProgram\obj\Debug\GraphicalProgram.Properties.Resources.resources
+C:\Data\GraphicalProgram\GraphicalProgram\GraphicalProgram\obj\Debug\GraphicalProgram.csproj.GenerateResource.cache
+C:\Data\GraphicalProgram\GraphicalProgram\GraphicalProgram\obj\Debug\GraphicalProgram.csproj.CoreCompileInputs.cache
+C:\Data\GraphicalProgram\GraphicalProgram\GraphicalProgram\obj\Debug\GraphicalProgram.exe
+C:\Data\GraphicalProgram\GraphicalProgram\GraphicalProgram\obj\Debug\GraphicalProgram.pdb
