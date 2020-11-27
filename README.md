@@ -2,6 +2,9 @@
 
 This program is used to demonstrate examples of being able to teach simple programming concepts. The language that was used to build this project is C#, and the program will have the basics of sequence, selection, and iteration, which will allow a student programmer to explore these concepts using graphics. 
 
+### Initial Tournament Dashboard 
+![](Images/graphicalprogram.PNG)
+
 ## How to Use 
 
 It's simple to get this program running on any Windows OS running Microsoft Visual Studio.
